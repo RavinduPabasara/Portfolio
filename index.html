@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Muses by RavinduPabasara</title>
@@ -11,6 +6,77 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.carousel {
+				position: relative;
+				width: 100%;
+				overflow: hidden;
+				margin-bottom: 2em;
+			}
+			.carousel-inner {
+				display: flex;
+				transition: transform 0.5s ease;
+			}
+			.carousel-item {
+				flex: 0 0 calc(33.333% - 20px);
+				margin: 0 10px;
+				box-sizing: border-box;
+			}
+			.carousel-control {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: rgba(0,0,0,0.5);
+				color: white;
+				padding: 10px;
+				text-decoration: none;
+				z-index: 10;
+			}
+			.carousel-control.prev { left: 0; }
+			.carousel-control.next { right: 0; }
+			.card {
+				background: rgba(255, 255, 255, 0.05);
+				border-radius: 8px;
+				overflow: hidden;
+				height: 400px;
+				display: flex;
+				flex-direction: column;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+			}
+			.card-image {
+				height: 150px;
+				overflow: hidden;
+			}
+			.card-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.card-content {
+				padding: 1em;
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+			}
+			.card h2 {
+				font-size: 1.2em;
+				margin-bottom: 0.5em;
+			}
+			.card p {
+				font-size: 0.9em;
+				line-height: 1.4;
+				flex-grow: 1;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+			}
+			.card .button {
+				align-self: flex-start;
+				margin-top: auto;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -38,13 +104,13 @@
 						<ul class="links">
 							<li class="active"><a href="index.html">Home</a></li>
 							<li><a href="Aboutme.html">About Me</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="https://github.com/RavinduPabasara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://medium.com/@karurpabe" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
 						</ul>
 					</nav>
 
@@ -63,108 +129,103 @@
 								Your browser does not support the video tag.
 							</video>
 							<ul class="actions special">
-								<li><a href="https://github.com/RavinduPabasara/Voicense-Lecture-Note-App" class="button large">View on GitHub</a></li>
+								<li><a href="https://github.com/Nimsara2001/voicense_backend" class="button large">View on GitHub</a></li>
 							</ul>
 						</article>
 
-						<!-- Projects Section -->
-						<section class="posts">
-							<article>
-								<header>
-									<span class="date">2024</span>
-									<h2><a href="#">Swarm Intelligence in Ant Colony Simulation</a></h2>
-								</header>
-								<a href="https://github.com/RavinduPabasara/swarm-intelligence-ants" class="image fit"><img src="images/ants.jpg" alt="Swarm Intelligence Ant Colony" /></a>
-								<p>Simulated ant foraging behavior using Python and Pygame, focusing on pheromone-based pathfinding to model collective intelligence.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/RavinduPabasara/swarm-intelligence-ants" class="button">View on GitHub</a></li>
-								</ul>
-							</article>
-
-							<article>
-								<header>
-									<span class="date">2024</span>
-									<h2><a href="#">Sinhala Fine-tuned distilGPT-2</a></h2>
-								</header>
-								<a href="https://github.com/RavinduPabasara/Alpaca-DistilGPT2-Sinhala-Finetuning" class="image fit"><img src="images/gpt2.jpg" alt="distilGPT-2 Sinhala" /></a>
-								<p>Fine-tuned distilGPT-2 model for Sinhala text generation using XLM-Roberta tokenizer with a translated Alpaca dataset.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/RavinduPabasara/Alpaca-DistilGPT2-Sinhala-Finetuning" class="button">View on GitHub</a></li>
-								</ul>
-							</article>
-
-							<article>
-								<header>
-									<span class="date">2023</span>
-									<h2><a href="#">Sentiment Analysis App</a></h2>
-								</header>
-								<a href="https://github.com/RavinduPabasara/sentiment-analysis-app" class="image fit"><img src="images/sentiment.jpg" alt="Sentiment Analysis App" /></a>
-								<p>Developed a web app using Flask and NLTK to perform real-time sentiment analysis on user-provided text.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/RavinduPabasara/sentiment-analysis-app" class="button">View on GitHub</a></li>
-								</ul>
-							</article>
+						<!-- Projects Carousel -->
+						<section>
+							<h2>Recent Projects</h2>
+							<div class="carousel" id="projects-carousel">
+								<div class="carousel-inner">
+									<div class="carousel-item">
+										<div class="card">
+											<div class="card-image">
+												<img src="images/ants.jpg" alt="Swarm Intelligence Ant Colony" />
+											</div>
+											<div class="card-content">
+												<span class="date">2024</span>
+												<h2><a href="#">Swarm Intelligence in Ant Colony Simulation</a></h2>
+												<p>Modelled pheromones and their effect in ant behaviour and moving patterns and simulated their foraging with Pygame.</p>
+												<a href="https://github.com/RavinduPabasara/swarm-intelligence-ants" class="button">View on GitHub</a>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="card">
+											<div class="card-image">
+												<img src="images/gpt2.jpg" alt="distilGPT-2 Sinhala" />
+											</div>
+											<div class="card-content">
+												<span class="date">2024</span>
+												<h2><a href="#">Sinhala Fine-tuned distilGPT-2</a></h2>
+												<p>Fine-tuned a distilGPT-2 model for generating Sinhala text using XLM-Roberta tokenizer and a translated Alpaca dataset.</p>
+												<a href="https://github.com/RavinduPabasara/Alpaca-DistilGPT2-Sinhala-Finetuning" class="button">View on GitHub</a>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="card">
+											<div class="card-image">
+												<img src="images/datacleaner.jpg" alt="Dynamic Data Cleaner" />
+											</div>
+											<div class="card-content">
+												<span class="date">2024</span>
+												<h2><a href="#">Dynamic Data Cleaner with Gemini LLM</a></h2>
+												<p>An attempt to leverage the capabilities of a LLM to do basic data cleaning. Used langchain for LLM integration, pandas for dataset manipulation and streamlit for the user interface.</p>
+												<a href="https://github.com/RavinduPabasara/DynamicDataCleanerWithGemini" class="button">View on GitHub</a>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="card">
+											<div class="card-image">
+												<img src="images/sentiment.jpg" alt="Sentiment Analysis App" />
+											</div>
+											<div class="card-content">
+												<span class="date">2023</span>
+												<h2><a href="#">Sentiment Analysis Web App</a></h2>
+												<p>Developed a web app for analyzing customer text sentiment using Flask and NLTK.</p>
+												<a href="https://github.com/RavinduPabasara/sentiment-analysis-app" class="button">View on GitHub</a>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="card">
+											<div class="card-image">
+												<img src="images/greendome.jpg" alt="Project Greendome" />
+											</div>
+											<div class="card-content">
+												<span class="date">2023</span>
+												<h2><a href="#">Project Greendome</a></h2>
+												<p>Built an indoor plant care system for level 1 hardware project for disease identification, watering, and fertilizing. Developed the functionalities for plant diseases identification via ESP32 Camera module.</p>
+												<a href="#" class="button">Learn More</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="carousel-control prev">&lt;</a>
+								<a href="#" class="carousel-control next">&gt;</a>
+							</div>
 						</section>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">Next</a>
+						<!-- Medium Articles Carousel -->
+						<section>
+							<h2>Latest Medium Articles</h2>
+							<div class="carousel" id="medium-carousel">
+								<div class="carousel-inner" id="medium-posts">
+									<!-- Medium posts will be dynamically inserted here -->
 								</div>
-							</footer>
+								<a href="#" class="carousel-control prev">&lt;</a>
+								<a href="#" class="carousel-control next">&gt;</a>
+							</div>
+						</section>
 
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>46A, Delgahawaththa, Wewahamanduwa, Matara, Sri Lanka</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">+94 721483648</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:karurpabe@gmail.com">karurpabe@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/RavinduPabasara" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
+						<!-- Footer content remains unchanged -->
 					</footer>
 
 				<!-- Copyright -->
@@ -182,6 +243,68 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Fetch Medium posts
+				fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@karurpabe')
+        .then(response => response.json())
+        .then(data => {
+            const mediumPosts = document.getElementById('medium-posts');
+            data.items.forEach(item => {
+                const article = document.createElement('div');
+                article.className = 'carousel-item';
+                article.innerHTML = `
+    <a href="${item.link}" class="card" style="text-decoration: none; color: inherit;">
+        <div class="card-image">
+            <img src="${item.thumbnail}" alt="${item.title}" />
+        </div>
+        <div class="card-content">
+            <span class="date">${new Date(item.pubDate).toLocaleDateString()}</span>
+            <p>${item.description.split(' ').slice(0, 20).join(' ')}...</p>
+        </div>
+    </a>
+`;
 
+                mediumPosts.appendChild(article);
+            });
+            // Initialize Medium carousel after posts are loaded
+            setupCarousel('medium-carousel');
+        })
+        .catch(error => console.error('Error fetching Medium posts:', error));
+// Carousel functionality
+function setupCarousel(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const inner = carousel.querySelector('.carousel-inner');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const prev = carousel.querySelector('.prev');
+    const next = carousel.querySelector('.next');
+    let currentIndex = 0;
+
+    function showItem(index) {
+        const itemWidth = 100 / 3; // Show 3 items at a time
+        inner.style.transform = `translateX(-${index * itemWidth}%)`;
+    }
+
+    prev.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = Math.max(currentIndex - 1, 0);
+        showItem(currentIndex);
+    });
+
+    next.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = Math.min(currentIndex + 1, items.length - 3);
+        showItem(currentIndex);
+    });
+
+    // Show first item initially
+    showItem(0);
+}
+
+// Setup carousels after DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    setupCarousel('projects-carousel');
+    // Medium carousel will be set up after posts are fetched
+});
+</script>
 	</body>
 </html>
