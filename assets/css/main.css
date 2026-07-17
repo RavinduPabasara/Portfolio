@@ -5145,3 +5145,38 @@ article:hover {
 	color: #0f172a !important;
 	box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
 }
+/* 2026 Polish: card hover + image consistency */
+#main>.posts>article {
+	border-radius: 8px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+#main>.posts>article:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 30px rgba(2, 6, 23, 0.55), 0 0 0 1px rgba(34, 211, 238, 0.25);
+}
+
+#main>.posts>article .image.fit img {
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	border-radius: 6px;
+	transition: transform 0.3s ease;
+}
+
+#main>.posts>article .image.fit {
+	overflow: hidden;
+	border-radius: 6px;
+}
+
+#main>.posts>article:hover .image.fit img {
+	transform: scale(1.03);
+}
+
+#main>.post.featured .image.main img {
+	border-radius: 8px;
+	box-shadow: 0 8px 26px rgba(2, 6, 23, 0.5);
+}
+
+#main>.post header.major h2 {
+	line-height: 1.25;
+}
