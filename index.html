@@ -39,9 +39,9 @@
 		<div id="intro">
 			<h1 class="glitch-effect">Hi!<br />
 				I am <span class="typing-text">Pabasara</span></h1>
-			<p>A Developer, A Problem Solver, AI Practitioner, and Always a Learner <br />
-				Welcome to my digital garden. Here I showcase my projects, research, and technical musings. Feel free to
-				explore!</p>
+			<p>BSc (Hons) AI Undergraduate &middot; Open-Source Contributor &middot; Always a Learner <br />
+				I build tools that put Sinhala and Sri Lanka on the AI map &mdash; libraries, benchmarks, and the
+				occasional study. Welcome to my digital garden; feel free to explore!</p>
 			<ul class="actions">
 				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 			</ul>
@@ -59,7 +59,6 @@
 			<ul class="links">
 				<li class="active"><a href="index.html">Home</a></li>
 				<li><a href="Aboutme.html">About Me</a></li>
-				<li><a href="elements.html">Elements Reference</a></li>
 			</ul>
 			<ul class="icons">
 				<li><a href="https://github.com/RavinduPabasara" class="icon brands fa-github"><span
@@ -76,7 +75,32 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- Featured Project -->
+			<!-- Featured: Open Source for Sinhala AI -->
+			<article class="post featured">
+				<header class="major">
+					<span class="date">2026</span>
+					<h2><a href="https://github.com/RavinduPabasara/tokscope">Open Source for Sinhala AI<br />
+							Tokenizers, Benchmarks & Libraries</a></h2>
+					<p>I measured how LLM tokenizers price Sinhala: the same content costs
+						<strong>2.26&times; more tokens than English</strong> on GPT-4o &mdash; and a 32k BPE tokenizer
+						I trained beats 200k+ multilingual vocabularies by 2&times;. Built
+						<a href="https://pypi.org/project/tokscope/"><strong>tokscope</strong></a> to make this measurable
+						for any language, published the tokenizer on
+						<a href="https://huggingface.co/RavinduPabasara/sinhala-bpe-32k">Hugging Face</a>, and contributed
+						the first Sinhala evaluation tasks to
+						<a href="https://github.com/EleutherAI/lm-evaluation-harness/pull/3941">EleutherAI's
+							lm-evaluation-harness</a> and the <code>si_LK</code> locale to
+						<a href="https://github.com/joke2k/faker/pull/2430">Faker</a>.</p>
+				</header>
+				<a href="https://github.com/RavinduPabasara/tokscope/tree/main/study" class="image main"><img
+						src="images/tokenizer_study.png" alt="How LLM tokenizers price Sinhala — study chart" /></a>
+				<ul class="actions special">
+					<li><a href="https://github.com/RavinduPabasara/tokscope/tree/main/study" class="button large">Read
+							the Study</a></li>
+					<li><a href="https://pypi.org/project/tokscope/" class="button large">pip install tokscope</a></li>
+				</ul>
+			</article>
+
 			<!-- Achievement Section -->
 			<article class="post featured achievement">
 				<header class="major">
@@ -112,6 +136,54 @@
 
 			<!-- Projects Section -->
 			<section class="posts">
+				<article>
+					<header>
+						<span class="date">2026</span>
+						<h2><a href="https://github.com/RavinduPabasara/slnic">slnic &mdash; Sri Lankan NIC
+								Library</a></h2>
+					</header>
+					<a href="https://pypi.org/project/slnic/" class="image fit"><img src="images/cyber_nlp.png"
+							alt="slnic Python library" /></a>
+					<p>Parse, validate, convert and generate Sri Lankan National Identity Card numbers &mdash; decodes
+						birth date and gender from both old and new formats. Zero dependencies, fully typed, on PyPI.</p>
+					<ul class="actions special">
+						<li><a href="https://pypi.org/project/slnic/" class="button">pip install slnic</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<span class="date">2026</span>
+						<h2><a href="https://huggingface.co/RavinduPabasara/sinhala-bpe-32k">sinhala-bpe-32k on Hugging
+								Face</a></h2>
+					</header>
+					<a href="https://huggingface.co/RavinduPabasara/sinhala-bpe-32k" class="image fit"><img
+							src="images/cyber_transformer.png" alt="Sinhala BPE tokenizer" /></a>
+					<p>A SentencePiece BPE tokenizer for Sinhala trained on OSCAR &mdash; fertility 1.58 with ~0 UNKs,
+						outperforming multilingual vocabularies 8&times; its size on Sinhala text.</p>
+					<ul class="actions special">
+						<li><a href="https://huggingface.co/RavinduPabasara/sinhala-bpe-32k" class="button">View on
+								Hugging Face</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<span class="date">2026</span>
+						<h2><a href="https://github.com/EleutherAI/lm-evaluation-harness/pull/3941">Upstream: Sinhala in
+								the LLM Ecosystem</a></h2>
+					</header>
+					<a href="https://github.com/EleutherAI/lm-evaluation-harness/pull/3941" class="image fit"><img
+							src="images/cyber_cognitive.png" alt="Upstream open source contributions" /></a>
+					<p>Contributed the first Sinhala evaluation tasks (NSINA benchmark suite) to EleutherAI's
+						lm-evaluation-harness, and the <code>si_LK</code> person locale to Faker &mdash; putting Sinhala
+						on the map in tools the whole AI ecosystem uses.</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/EleutherAI/lm-evaluation-harness/pull/3941" class="button">View
+								PRs</a></li>
+					</ul>
+				</article>
+
 				<article>
 					<header>
 						<span class="date">2024</span>
@@ -228,6 +300,32 @@
 				</article>
 			</section>
 
+			<!-- Medium Articles Section -->
+			<section>
+				<header class="major">
+					<h2>Latest Writings</h2>
+					<p>Fresh from my Medium, dynamically loaded.</p>
+				</header>
+			</section>
+			<section id="medium-posts" class="posts">
+				<!-- Loading Placeholder -->
+				<article>
+					<header>
+						<span class="date">Loading...</span>
+						<h2><a href="#">Fetching latest articles...</a></h2>
+					</header>
+					<div class="image fit"
+						style="background: rgba(34, 211, 238, 0.1); height: 200px; display: flex; align-items: center; justify-content: center;">
+						<i class="fas fa-circle-notch fa-spin fa-2x" style="color: var(--accent-primary);"></i>
+					</div>
+				</article>
+			</section>
+
+			<!-- Blog Footer -->
+			<section class="footer">
+				<p>Check out more of my writing on <a href="https://medium.com/@karurpabe">Medium</a>.</p>
+			</section>
+
 			<!-- Footer -->
 			<!-- Footer -->
 			<!-- 							<footer>
@@ -254,39 +352,11 @@
 				</ul>
 			</section>
 
-			<!-- Medium Articles Section -->
-			<section class="posts">
-				<header class="major">
-					<h2>Latest Writings</h2>
-					<p>Fresh from my Medium, dynamically loaded.</p>
-				</header>
-				<div id="medium-posts" class="posts">
-					<!-- Loading Placeholder -->
-					<article>
-						<header>
-							<span class="date">Loading...</span>
-							<h2><a href="#">Fetching latest articles...</a></h2>
-						</header>
-						<div class="image fit"
-							style="background: rgba(34, 211, 238, 0.1); height: 200px; display: flex; align-items: center; justify-content: center;">
-							<i class="fas fa-circle-notch fa-spin fa-2x" style="color: var(--accent-primary);"></i>
-						</div>
-					</article>
-				</div>
-			</section>
 
-			<!-- Blog Footer -->
-			<section class="footer">
-				<p>Check out more of my writing on <a href="https://medium.com/@karurpabe">Medium</a>.</p>
-			</section>
 			<section class="split contact">
 				<section class="alt">
-					<h3>Address</h3>
-					<p>46A, Delgahawaththa, Wewahamanduwa, Matara, Sri Lanka</p>
-				</section>
-				<section>
-					<h3>Phone</h3>
-					<p><a href="#">+94 721483648</a></p>
+					<h3>Location</h3>
+					<p>Matara, Sri Lanka</p>
 				</section>
 				<section>
 					<h3>Email</h3>
